@@ -1,0 +1,240 @@
+Conversation opened. 1 read message.
+
+Skip to content
+Using Educational Institutions Mail with screen readers
+in:sent 
+
+2 of 29
+vininfo coding answer
+
+Mahasakthi Bhagyaraj <2326jb22@kgcas.com>
+Dec 8, 2025, 9:18 PM (12 hours ago)
+to 2326jb15
+
+1. Find Largest Number
+public class LargestNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int largest = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+        System.out.println("Largest Number: " + largest);
+    }
+}
+ 2. Check Palindrome
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        String str = "madam";
+        boolean isPalindrome = true;
+
+        int i = 0, j = str.length() - 1;
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j)) {
+                isPalindrome = false;
+                break;
+            }
+            i++;
+            j--;
+        }
+        System.out.println("Palindrome: " + isPalindrome);
+    }
+}
+ 3. Count Substring Occurrences
+public class SubstringCount {
+    public static void main(String[] args) {
+        String str = "ababababab";
+        String sub = "ab";
+        int count = 0;
+
+        for (int i = 0; i <= str.length() - sub.length(); i++) {
+            boolean match = true;
+            for (int j = 0; j < sub.length(); j++) {
+                if (str.charAt(i + j) != sub.charAt(j)) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) count++;
+        }
+        System.out.println("Occurrences: " + count);
+    }
+}
+ 4. Reverse String
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "hello";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+        System.out.println("Reversed: " + rev);
+    }
+}
+5. Count Vowels
+public class VowelCount {
+    public static void main(String[] args) {
+        String str = "hello world";
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||
+                c=='A'||c=='E'||c=='I'||c=='O'||c=='U') {
+                count++;
+            }
+        }
+        System.out.println("Vowels: " + count);
+    }
+}
+ 6. Sum of First N Natural Numbers
+public class SumNaturalNumbers {
+    public static void main(String[] args) {
+        int n = 5, sum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+ 7. Check Prime
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int n = 7;
+        boolean prime = true;
+
+        if (n <= 1) prime = false;
+        else {
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+        }
+        System.out.println("Prime: " + prime);
+    }
+}
+8. Second Largest Element
+public class SecondLargest {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int largest = arr[0], second = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                second = largest;
+                largest = arr[i];
+            } else if (arr[i] > second && arr[i] != largest) {
+                second = arr[i];
+            }
+        }
+        System.out.println("Second Largest: " + second);
+    }
+}
+9. Factorial
+public class Factorial {
+    public static void main(String[] args) {
+        int n = 5, fact = 1;
+
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        System.out.println("Factorial: " + fact);
+    }
+}
+10. Leap Year
+public class LeapYear {
+    public static void main(String[] args) {
+        int year = 2024;
+        boolean leap = false;
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            leap = true;
+
+        System.out.println("Leap Year: " + leap);
+    }
+}
+11. Find String Length
+public class StringLength {
+    public static void main(String[] args) {
+        String str = "hello";
+        int len = 0;
+
+        for (char c : str.toCharArray()) {
+            len++;
+        }
+        System.out.println("Length: " + len);
+    }
+}
+12. Count Words
+public class WordCount {
+    public static void main(String[] args) {
+        String str = "I am learning Python";
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ')
+                count++;
+        }
+        count++;
+        System.out.println("Words: " + count);
+    }
+}
+13. Remove Duplicates
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        int[] arr = {1,2,2,3,3,4};
+        int[] temp = new int[arr.length];
+        int k = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            boolean exists = false;
+            for (int j = 0; j < i; j++) {
+                if (arr[i] == arr[j]) {
+                    exists = true;
+                    break;
+                }
+            }
+            if (!exists) temp[k++] = arr[i];
+        }
+
+        System.out.print("After Removing Duplicates: ");
+        for (int i = 0; i < k; i++)
+            System.out.print(temp[i] + " ");
+    }
+}
+14. Sum of List
+public class SumList {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+15. Check if Element Exists
+public class ElementCheck {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4};
+        int target = 3;
+        boolean found = false;
+
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] == target){
+                found = true;
+                break;
+            }
+        }
+        System.out.println("Found: " + found);
+    }
+}
+Page 10 of 10
